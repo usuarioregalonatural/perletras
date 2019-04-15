@@ -10,26 +10,18 @@ ini_set('display_errors', '1');
 // Motrar todos los errores de PHP
 ini_set('error_reporting', E_ALL);
 
-//try {
+
 use Imagick;
-//} catch (PDOException $e){
-//      echo "hay un fallo" . $e->getMessage();
-//      exit;
-//}
 
 define("ruta",$_SERVER['DOCUMENT_ROOT'] . "/perletras/images/");
-//define("ruta","gestion.vicsoft.net:8081/perletras/images/");
 define("imgfondo","fondo004.jpg");
 
 $nombre=htmlspecialchars($_POST["nombre"]);
-//$valor=htmlspecialchars($_GET["nombre"]);
-//echo $valor;
-//$valor="mariano";
 
 ProcesaPalabra($nombre);
-//echo ruta .$valor . "jpg";
 
 function ProcesaPalabra ($texto){
+    $nombre=$texto;
     $array_letras = str_split($texto);
     $longitud_array=count($array_letras);
     $nombre_fichero=ruta . $texto. ".png";
@@ -53,11 +45,9 @@ function ProcesaPalabra ($texto){
         $imagen_final->addImage($combinedRow);
     }
     $imagen_final->setImageFormat('png');
-//    header("Content-Type: image/png");
-//    echo $imagen_final->getImageBlob();
     $imagen_final->writeImage($nombre_fichero);
 
-    Fusiona2($nombre_fichero,$texto);
+    Fusiona2($nombre_fichero,$nombre);
     return ;
 }
 
