@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c5624b62-aa91-49ef-a08b-9c6f558e889f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +16,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+            <state relative-caret-position="410">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
             </state>
           </provider>
         </entry>
@@ -30,7 +29,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="001-Poner-Imagen-Fondo" />
+        <entry key="$PROJECT_DIR$" value="002-Limpieza-de-codigo" />
       </map>
     </option>
     <excluded-from-favorite>
@@ -84,6 +83,11 @@
               <item name="perletras" type="b2602c69:ProjectViewProjectNode" />
               <item name="perletras" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="perletras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="perletras" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -132,7 +136,7 @@
       <workItem from="1555183570202" duration="870000" />
       <workItem from="1555184449184" duration="12186000" />
       <workItem from="1555318922388" duration="218000" />
-      <workItem from="1555319495376" duration="605000" />
+      <workItem from="1555319495376" duration="1138000" />
     </task>
     <task id="LOCAL-00001" summary="Personalizacion de letras inicial. Ajustes de escalado de letras con el fondo.">
       <created>1555268388698</created>
@@ -148,15 +152,28 @@
       <option name="project" value="LOCAL" />
       <updated>1555268805615</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Limpieza de funciones y código que no se utiliza. Confirmación">
+      <created>1555352960612</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555352960612</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Genera la imagen adecuadamente y devuelve la ruta de esta imagen personalizada">
+      <created>1555353324751</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555353324751</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30959000" />
+    <option name="totallyTimeSpent" value="31492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -164,10 +181,10 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.32943678" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" visible="true" weight="0.32943678" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.32943678" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32943678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" weight="0.32943678" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.32943678" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995749" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -189,7 +206,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Personalizacion de letras inicial. Ajustes de escalado de letras con el fondo." />
     <MESSAGE value="Limpieza de funciones y código que no se utiliza" />
-    <option name="LAST_COMMIT_MESSAGE" value="Limpieza de funciones y código que no se utiliza" />
+    <MESSAGE value="Limpieza de funciones y código que no se utiliza. Confirmación" />
+    <MESSAGE value="Genera la imagen adecuadamente y devuelve la ruta de esta imagen personalizada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Genera la imagen adecuadamente y devuelve la ruta de esta imagen personalizada" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -234,8 +253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        <state relative-caret-position="410">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
         </state>
       </provider>
     </entry>
