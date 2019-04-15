@@ -21,6 +21,7 @@ $nombre=htmlspecialchars($_POST["nombre"]);
 ProcesaPalabra($nombre);
 
 function ProcesaPalabra ($texto){
+    $nombre=$texto;
     $array_letras = str_split($texto);
     $longitud_array=count($array_letras);
     $nombre_fichero=ruta . $texto. ".png";
@@ -46,7 +47,7 @@ function ProcesaPalabra ($texto){
     $imagen_final->setImageFormat('png');
     $imagen_final->writeImage($nombre_fichero);
 
-    Fusiona2($nombre_fichero,$texto);
+    Fusiona2($nombre_fichero,$nombre);
     return ;
 }
 
