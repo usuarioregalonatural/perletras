@@ -8,14 +8,15 @@
 use Imagick;
 
 define("ruta",$_SERVER['DOCUMENT_ROOT'] . "/perletras/images/");
+//define("ruta","gestion.vicsoft.net:8081:/perletras/images/");
 define("imgfondo","fondo004.jpg");
 
 $valor=htmlspecialchars($_POST["nombre"]);
 //echo $valor;
-$valor="mariano";
+$valor="damanadam";
 
 ProcesaPalabra($valor);
-return ruta . "final.jpg";
+echo ruta . "final.jpg";
 
 function ProcesaPalabra ($texto){
     $array_letras = str_split($texto);
@@ -41,8 +42,8 @@ function ProcesaPalabra ($texto){
         $imagen_final->addImage($combinedRow);
     }
     $imagen_final->setImageFormat('png');
-    header("Content-Type: image/png");
-    echo $imagen_final->getImageBlob();
+  //  header("Content-Type: image/png");
+ //   echo $imagen_final->getImageBlob();
     $imagen_final->writeImage($nombre_fichero);
 
     Fusiona2($nombre_fichero);
