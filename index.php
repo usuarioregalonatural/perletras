@@ -17,7 +17,6 @@ define("ruta",$_SERVER['DOCUMENT_ROOT'] . "/perletras/images/");
 define("imgfondo","fondo004.jpg");
 
 $nombre=htmlspecialchars($_POST["nombre"]);
-
 ProcesaPalabra($nombre);
 
 function ProcesaPalabra ($texto){
@@ -63,13 +62,8 @@ function Fusiona2($texto, $nombre_personalizado){
     $first->compositeImage($second, \Imagick::COMPOSITE_DEFAULT, 120, 380);
 //new image is saved as final.jpg
     $first->writeImage(ruta . "Final-" . $nombre_personalizado . ".jpg");
-    echo ruta . "Final-" . $nombre_personalizado . ".jpg";
-//    $salida = $first->getimageblob();
-//    $salida_tipo= $first->getFormat();
 
-//    header("Content-Type: image/png");
-//    echo $salida;
-
+    echo "http://gestion.vicsoft.net:8081/perletras/images/" . "Final-" . $nombre_personalizado . ".jpg";
 }
 
 
