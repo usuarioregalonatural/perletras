@@ -20,8 +20,8 @@ $nombre=htmlspecialchars($_POST["nombre"]);
 ProcesaPalabra($nombre);
 
 function ProcesaPalabra ($texto){
-    $nombre=$texto;
-    $array_letras = str_split($texto);
+    $nombre=strtoupper($texto);
+    $array_letras = str_split($nombre);
     $longitud_array=count($array_letras);
     $nombre_fichero=ruta . $texto. ".png";
     for($i=0; $i<$longitud_array; $i++)
