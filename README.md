@@ -26,29 +26,51 @@ Es necesario disponer de un directorio **fuera del docker** en el sistema host p
 
 ## Ejecución del Docker
 El docker se ejecutará mediante docker run como sigue:
-```ssh
+```sh
 docker run -d -p 8081:80 -v /directorio_persistente:/var/www/html --name tienda_pers -h pers vicsoft01/tienda_pers:1.0
 ```
 
 Actualmente la ejecución es la siguiente:
-```ssh
+```sh
 docker run -d -p 8081:80 -v /home/nousers/dockers/tienda/personalizacion/web:/var/www/html --name tienda_pers -h pers vicsoft01/tienda_pers:1.0
 ```
 
 ## Examinar el Docker
 Para examinar el contenido del docker una vez en ejecución tendremos que buscar el nombre que tiene:
-```ssh
+```sh
 docker ps -a
 ```
 Nos mostrará los dockers actuales:
-```ssh
+```sh
 CONTAINER ID    IMAGE                     COMMAND        CREATED       STATUS   PORTS                 NAMES
 09b0b4f05899   vicsoft01/tienda_pers:1.0  "/bin/bash"   2 weeks ago  Up 2 weeks 0.0.0.0:8082->80/tcp tmptienda_pers
 ```
 Elegimos el docker perletras que en este caso hemos nombrado como **tmptienda_pers** y ejecutamos el comando:
-```ssh
+```sh
 docker container exec -it tmptienda_pers /bin/bash
 ```
 Una vez dentro podremos revisar lo que deseemos.
 
-  
+## Utilización
+La utilización de este docker se realizará mediante un llamada **curl** de tipo **POST** que nos devolverá la ruta de la imagen generada con el texto enviado.
+Un ejemplo de utilización con PHP es el siguiente:
+```php
+        $valor="textoenviado";
+// abrimos la sesión cURL
+        $ch = curl_init();
+// definimos la URL a la que hacemos la petición (este será el docker donde ejecuta [perletras])
+        curl_setopt($ch, CURLOPT_URL,"http://gestion.vicsoft.net:8081/perletras/index.php");
+// indicamos el tipo de petición: POST
+        curl_setopt($ch, CURLOPT_POST, TRUE);
+// definimos cada uno de los parámetros
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $valor);
+// recibimos la respuesta y la guardamos en una variable
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $remote_server_output = curl_exec ($ch);
+// cerramos la sesión cURL
+        curl_close ($ch);
+// Si el código está dentro de una función, retornamos la url de la imagen generada
+       return $remote_server_output;
+// si lo vamos a seguir utilizando almacenamos la url en una variable
+        $linkImagenGenerada=$remote_server_output;
+```
