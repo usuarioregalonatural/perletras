@@ -17,10 +17,10 @@ define("ruta",$_SERVER['DOCUMENT_ROOT'] . "/perletras/images/");
 define("imgfondo","fondo004.jpg");
 
 $nombre=htmlspecialchars($_POST["nombre"]);
-ProcesaPalabra($nombre);
+ProcesaPalabra(strtoupper($nombre));
 
 function ProcesaPalabra ($texto){
-    $nombre=strtoupper($texto);
+    $nombre=$texto;
     $array_letras = str_split($nombre);
     $longitud_array=count($array_letras);
     $nombre_fichero=ruta . $texto. ".png";
